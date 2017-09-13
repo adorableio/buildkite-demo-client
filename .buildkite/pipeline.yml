@@ -7,8 +7,6 @@ steps:
   - label: jest
     command: npm test
 
-  - wait
-
   - trigger: user-tests-pipeline
     label: User Tests
     build:
