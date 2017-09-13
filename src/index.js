@@ -1,8 +1,8 @@
-import React             from 'react';
-import ReactDOM          from 'react-dom';
-import { AppContainer }  from 'react-hot-loader';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 
-import Root              from './containers/Root';
+import Root from './containers/Root';
 import configureStore from './store';
 
 const store = configureStore();
