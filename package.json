@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "eslint-config-adorable": "^0.0.5",
-    "itg-react-scripts": "^0.0.18",
+    "itg-react-scripts": "^0.0.22",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
