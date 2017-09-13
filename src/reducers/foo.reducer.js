@@ -1,4 +1,4 @@
-import { ADD_FOO } from 'actions/foo';
+import { ADD_FOO } from 'actions/foo.actions';
 
 const initialState = {
   foos: [],

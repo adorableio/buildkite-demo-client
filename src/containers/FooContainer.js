@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { addFoo } from 'actions/foo';
+import { addFoo } from 'actions/foo.actions';
 
 class Foo extends Component {
   static propTypes = {

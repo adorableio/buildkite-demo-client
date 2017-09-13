@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Route, Link } from 'react-router-dom';
 
 import Home from 'components/Home';
-import Foo from 'components/Foo';
+import Foo from 'components/FooContainer';
 
 const Layout = () => (
   <div>
