@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
 
 class Home extends Component {
@@ -8,13 +7,7 @@ class Home extends Component {
     this.state = {};
   }
 
-  static propTypes = {
-    name: PropTypes.string,
-    description: PropTypes.string,
-    updated_at: PropTypes.string,
-  };
-
-  componentWillMount () {
+  getIndex = () => {
     return axios.get('http://localhost:3002/index')
     .then((response) => {
       this.setState({ ...response.data });
@@ -26,11 +19,14 @@ class Home extends Component {
     return (
       <div>
         <h2>Home</h2>
-        <div className='content'>
-          <h4>name: {name}</h4>
-          <h4>description: {description}</h4>
-          <h4>updated_at: {updated_at}</h4>
-        </div>
+        <button onClick={this.getIndex}>Get Content</button>
+        { this.state.name && (
+          <div className='content'>
+            <h4>name: {name}</h4>
+            <h4>description: {description}</h4>
+            <h4>updated_at: {updated_at}</h4>
+          </div>
+        )}
       </div>
     );
   }

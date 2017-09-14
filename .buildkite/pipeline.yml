@@ -9,6 +9,7 @@ steps:
 
   - trigger: user-tests-pipeline
     label: User Tests
+    branches: 'master'
     build:
       env:
         TRIGGERING_REPO: "buildkite-demo-client"
