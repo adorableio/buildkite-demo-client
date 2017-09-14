@@ -13,7 +13,7 @@ describe('Home', () => {
     const state = await generateResponseFromSchema(rootPath, 'index.get.contract.js');
 
     const wrapper = shallow(<Home />);
-    wrapper.setState(state);
+    wrapper.setState({ content: state });
 
     expect(wrapper.text()).toContain(state.name);
     expect(wrapper.text()).toContain(state.description);

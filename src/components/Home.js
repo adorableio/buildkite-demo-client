@@ -4,23 +4,25 @@ import axios from 'axios';
 class Home extends Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.state = {
+      content: {},
+    };
   }
 
   getIndex = () => {
     return axios.get('http://localhost:3002/index')
     .then((response) => {
-      this.setState({ ...response.data });
+      this.setState({ content: response.data });
     });
   }
 
   render () {
-    const { name, description, updated_at } = this.state;
+    const { name, description, updated_at } = this.state.content;
     return (
       <div>
         <h2>Home</h2>
-        <button onClick={this.getIndex}>Get Content</button>
-        { this.state.name && (
+        <button className='get-content' onClick={this.getIndex}>Get Content</button>
+        { this.state.content !== {} && (
           <div className='content'>
             <h4>name: {name}</h4>
             <h4>description: {description}</h4>
