@@ -6,3 +6,11 @@ steps:
 
   - label: jest
     command: npm test
+
+  - trigger: user-tests-pipeline
+    label: User Tests
+    build:
+      env:
+        TRIGGERING_REPO: "buildkite-demo-client"
+        TRIGGERING_BRANCH: "${BUILDKITE_BRANCH}"
+        TRIGGERING_SHA: "${BUILDKITE_COMMIT}"
